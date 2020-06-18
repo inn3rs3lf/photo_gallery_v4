@@ -9,7 +9,10 @@
 </head>
 <body>
     <main>
-        <input type="text" placeholder="Search..." class="search">
+        <input id="search" name="search" type="text" data-list=".image-wrapper" type="text" placeholder="Search..." class="search">
+        <ul class="list">
+            <li></li>
+          </ul>
 
         <section class="wrapper">
 
@@ -62,6 +65,14 @@
           'showImageNumberLabel' : false,
           'fitImagesInViewport': true
         })
+    </script>
+    <script type="text/javascript" src="/js/jquery.hideseek.js"></script>
+    <script>
+       $(document).ready(function(){
+            $('#search').hideseek({
+             attribute: 'data-title'
+    });
+  });
     </script>
     
 </body>
