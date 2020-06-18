@@ -6,9 +6,10 @@
 }
 
 main {
-    width: 60%;
+    
     margin: 0 auto;
     align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
@@ -29,12 +30,27 @@ main {
 .wrapper {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     margin: 0 auto;
     justify-content: space-around;
 }
 
 .image-wrapper {
-    width: 25%;
     padding: 2em;
 }
 
+.image-wrapper data-title {
+    font-size: 16em;
+}
+
+
+
+@media (max-width: 760px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        padding: 2em;
+    }
+}
